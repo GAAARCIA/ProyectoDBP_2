@@ -1,4 +1,12 @@
 
+:root{
+  --color-texto: #D1E8E2;
+}
+
 #titulo-principal {
-  color: var(#116466);
+  color: var(--color-texto);
+}
+
+p {
+  border-color: #D9B08C;
 }
