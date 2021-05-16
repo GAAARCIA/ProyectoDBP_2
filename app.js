@@ -13,9 +13,6 @@ http.createServer((request, response) =>{
      }else{
       const extension = file.split('.').pop();
       switch(extension){
-           case 'txt':
-                response.writeHead(200, {"Content-Type":"text/plain"});
-                break;
            case 'js':
                 response.writeHead(200, {"Content-Type":"text/javascript"});
                 break;
