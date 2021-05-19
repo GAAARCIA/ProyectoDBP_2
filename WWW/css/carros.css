@@ -14,34 +14,34 @@
 }
 
 .conteiner-carros .hero {
-    background-color: brown;
+    background-color: #2C3531;
     grid-area: hero;
 }
 .conteiner-carros .img-carro1 {
-    background-color: brown;
+    background-color: #2C3531;
     grid-area: img-carro1;
 }
 .conteiner-carros .img-carro2 {
-    background-color: brown;
+    background-color: #2C3531;
     grid-area: img-carro2;
 }
 .conteiner-carros .img-carro3 {
-    background-color: brown;
+    background-color: #2C3531;
     grid-area: img-carro3;
 }
 .conteiner-carros .carro1 {
-    background-color: brown;
+    background-color: #D1E8E2;
     grid-area: info-carro1;
 }
 
 .conteiner-carros .carro2 {
-    background-color: black;
+    background-color: #D1E8E2;
     grid-area: info-carro2;
 }
 
 .conteiner-carros .carro3 {
     grid-area: info-carro3;
-    background-color: bisque;
+    background-color: #D1E8E2;
 }
 
 .conteiner-carros .footer {
