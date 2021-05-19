@@ -1,0 +1,51 @@
+.conteiner-carros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+    grid-template-areas:
+        "hero hero hero"
+        "img-carro1 img-carro2 img-carro3"
+        "info-carro1 info-carro2 info-carro3"
+        "footer footer footer";
+}
+.conteiner-carros > div {
+    height: 200px;
+}
+
+.conteiner-carros .hero {
+    background-color: brown;
+    grid-area: hero;
+}
+.conteiner-carros .img-carro1 {
+    background-color: brown;
+    grid-area: img-carro1;
+}
+.conteiner-carros .img-carro2 {
+    background-color: brown;
+    grid-area: img-carro2;
+}
+.conteiner-carros .img-carro3 {
+    background-color: brown;
+    grid-area: img-carro3;
+}
+.conteiner-carros .carro1 {
+    background-color: brown;
+    grid-area: info-carro1;
+}
+
+.conteiner-carros .carro2 {
+    background-color: black;
+    grid-area: info-carro2;
+}
+
+.conteiner-carros .carro3 {
+    grid-area: info-carro3;
+    background-color: bisque;
+}
+
+.conteiner-carros .footer {
+    background-color: blueviolet;
+    grid-area: footer;
+}
+
