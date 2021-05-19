@@ -1,0 +1,41 @@
+.container-acerca-acerca {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 20px;
+    grid-template-areas:
+        "hero hero hero"
+        "equipo equipo equipo"
+        "mis-vis-val mis-vis-val mis-vis-val"
+        "objetivos objetivos objetivos"
+        "footer footer footer";
+}
+
+.container-acerca > div {
+    height: 200px;
+}
+
+.container-acerca .hero {
+    background-color: aquamarine;
+    grid-area: hero;
+}
+
+.container-acerca .equipo {
+    background-color: darkgoldenrod;
+    grid-area: equipo;
+}
+
+.container-acerca .mis-vis-val {
+    background-color: red;
+    grid-area: mis-vis-val;
+}
+
+.container-acerca .objetivos {
+    background-color: purple;
+    grid-area: objetivos;
+}
+
+.container-acerca .footer {
+    background-color: forestgreen;
+    grid-area: footer;
+}
