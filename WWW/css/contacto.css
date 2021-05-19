@@ -1,12 +1,30 @@
-.container-acerca-acerca {
+.container-contacto {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(4, auto);
     gap: 20px;
     grid-template-areas:
         "hero hero hero"
-        "equipo equipo equipo"
-        "mis-vis-val mis-vis-val mis-vis-val"
-        "objetivos objetivos objetivos"
+        "lugares lugares lugares"
+        "cartas cartas cartas"
         "footer footer footer";
+}
+
+.container-contacto > div {
+    height: 200px;
+}
+
+.container-contacto .lugares {
+    grid-area: lugares;
+    background-color: aqua;
+}
+
+.container-contacto .cartas {
+    grid-area: cartas;
+    background-color: aquamarine;
+}
+
+.container-contacto .footer {
+    background-color: blue;
+    grid-area: footer;
 }
