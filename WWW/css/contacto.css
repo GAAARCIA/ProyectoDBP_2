@@ -1,0 +1,12 @@
+.container-acerca-acerca {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 20px;
+    grid-template-areas:
+        "hero hero hero"
+        "equipo equipo equipo"
+        "mis-vis-val mis-vis-val mis-vis-val"
+        "objetivos objetivos objetivos"
+        "footer footer footer";
+}
