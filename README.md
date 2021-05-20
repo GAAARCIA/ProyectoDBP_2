@@ -1,11 +1,11 @@
-TU PRIMER SITIO WEB
+# TU PRIMER SITIO WEB
 
 ***
 	Proyecto del segundo parcial de Desarrollo Basado en Plataformas, realizamos una página web para una empresa de renta de automoviles.
 
-EMPEZANDO
+## EMPEZANDO
 ***
- Prerequisitos
+### Prerequisitos
 
 	Se necesita instalar DOCKER para poder descargar la imagen.
 	Se instala desde la terminal con los comandos:
