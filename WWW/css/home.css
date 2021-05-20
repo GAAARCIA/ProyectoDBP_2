@@ -2,12 +2,11 @@
 .conteiner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
     gap: 20px;
     grid-template-areas:
         "hero hero hero"
         "seccion1 seccion1 img-seccion1"
-        "seccion2 seccion2 seccion2"
         "footer footer footer";
   background-color: #2c3531;
 }
@@ -33,20 +32,22 @@
 }
 
 .conteiner .seccion1 {
-    background-color: black;
+    background-color: #2c3531;
     grid-area: seccion1;
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 }
+
 
 .conteiner .img-seccion1 {
-    background-color: aquamarine;
+    background-color: #D9B08C;
     grid-area: img-seccion1;
-}
-
-.conteiner .seccion2 {
-    grid-area: seccion2;
-    background-color: bisque;
 }
 
 .conteiner .footer {
     grid-area: footer;
 }
+
