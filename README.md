@@ -21,7 +21,9 @@ con los comandos:
 
 ## Instalación
 
-Se descarga la imagen de docker y se observa todo en la terminal
+Se descarga la imagen de docker usando el siguiente comando:
+
+	docker pull 
 	
 
 ## Corriendo pruebas
