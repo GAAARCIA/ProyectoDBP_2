@@ -7,7 +7,7 @@
         "hero hero hero"
         "equipo equipo equipo"
         "mis-vis-val mis-vis-val mis-vis-val"
-        "objetivos objetivos objetivos"
+        "frase frase frase"
         "footer footer footer";
 }
 
@@ -16,6 +16,7 @@
 }
 
 .container-acerca .hero {
+	background-color: #D1E8E2;
     grid-area: hero;
 }
 
@@ -27,8 +28,8 @@
     grid-area: mis-vis-val;
 }
 
-.container-acerca .objetivos {
-    grid-area: objetivos;
+.container-acerca .frase {
+    grid-area: frase;
 }
 
 .container-acerca .footer {
