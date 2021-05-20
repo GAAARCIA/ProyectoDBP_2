@@ -14,38 +14,37 @@
 }
 
 .conteiner-carros .hero {
-    background-color: #2C3531;
+    background-color: #D1E8E2;
     grid-area: hero;
 }
 .conteiner-carros .img-carro1 {
-    background-color: #2C3531;
+    background-color: white;
     grid-area: img-carro1;
 }
 .conteiner-carros .img-carro2 {
-    background-color: #2C3531;
+    background-color: white;
     grid-area: img-carro2;
 }
 .conteiner-carros .img-carro3 {
-    background-color: #2C3531;
+    background-color: white;
     grid-area: img-carro3;
 }
 .conteiner-carros .carro1 {
-    background-color: #D1E8E2;
+    background-color: #F0F8FF;
     grid-area: info-carro1;
 }
 
 .conteiner-carros .carro2 {
-    background-color: #D1E8E2;
+    background-color: #F0F8FF;
     grid-area: info-carro2;
 }
 
 .conteiner-carros .carro3 {
     grid-area: info-carro3;
-    background-color: #D1E8E2;
+    background-color: #F0F8FF;
 }
 
 .conteiner-carros .footer {
-    background-color: blueviolet;
     grid-area: footer;
 }
 
