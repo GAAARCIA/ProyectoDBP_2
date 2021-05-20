@@ -13,8 +13,23 @@
 }
 
 .conteiner .hero {
-    background-color: brown;
+    background-color: #2c3531;
     grid-area: hero;
+    height: 300px;
+    overflow: auto;
+    background-image: url("https://images.unsplash.com/photo-1512850183-6d7990f42385?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80");
+    background-position: center;
+    background-size: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    margin: 0 auto;
+    color: #D1E8E2;
+    font-size: 38px;
 }
 
 .conteiner .seccion1 {
