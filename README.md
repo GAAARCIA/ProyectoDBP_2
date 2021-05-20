@@ -5,12 +5,17 @@ TU PRIMER SITIO WEB
 
 EMPEZANDO
 ***
-Prerequisitos
+ Prerequisitos
 
 	Se necesita instalar DOCKER para poder descargar la imagen.
 	Se instala desde la terminal con los comandos:
                 apt-get update
                 apt-get install docker
+				
+	Se necesita instalar NODEJS para poder ejecutar el servidor.
+	Se instala desde la terminal con los comandos:
+				apt-get update
+				apt-get install nodejs
 
  Instalación
 
@@ -19,15 +24,23 @@ Prerequisitos
 
  Corriendo pruebas
 ***
-	Se empezó con una estructura básica en cada archivo html y se trabajó sobre él.
-
-
- Despliegue
-***
+	Para ejecutar el servidor se usa en terminal el siguiente comando:
+			node app.js
+	
+	Ya que se está ejecutando el servidor, ponemos la siguiente dirección
+	en el navegador para poder acceder al sitio web:
+			http://localhost:8888;
 	
  Construido con
 ***
-	HTML, JAVASCRIPT, CSS
+	Visual Studio - Editor de texto
+	Node js - Entorno para ejecutar JavaScript
+	
+ Lenguajes
+***
+	HTML
+	CSS
+	JavaScript
 
  Contribuciones
 ***
