@@ -9,6 +9,7 @@
         "seccion1 seccion1 img-seccion1"
         "seccion2 seccion2 seccion2"
         "footer footer footer";
+  background-color: #2c3531;
 }
 
 .conteiner .hero {
@@ -32,12 +33,5 @@
 }
 
 .conteiner .footer {
-    background-color: blueviolet;
     grid-area: footer;
-}
-
-.footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    height: 200px;
 }
