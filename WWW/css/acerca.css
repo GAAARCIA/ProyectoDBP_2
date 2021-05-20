@@ -16,26 +16,21 @@
 }
 
 .container-acerca .hero {
-    background-color: aquamarine;
     grid-area: hero;
 }
 
 .container-acerca .equipo {
-    background-color: darkgoldenrod;
     grid-area: equipo;
 }
 
 .container-acerca .mis-vis-val {
-    background-color: red;
     grid-area: mis-vis-val;
 }
 
 .container-acerca .objetivos {
-    background-color: purple;
     grid-area: objetivos;
 }
 
 .container-acerca .footer {
-    background-color: forestgreen;
     grid-area: footer;
 }
