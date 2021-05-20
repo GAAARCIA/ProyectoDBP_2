@@ -11,7 +11,7 @@
     <body>
         <div id="nav-bar">
             <div>
-                <img id="logo" src="./assets/imgs/logo.png" alt="">
+                <img id="logo" src="./assets/imgs/logo.png" alt="" />
             </div>
             <div class="nav-bar-links">
                 <a href="./index.html" class="nav-item">Home</a>
@@ -23,20 +23,34 @@
 
         <div class="container-contacto">
             <div class="hero">
-                <h1> Amamos el lugar donde estas </h1>
+                <h1>Amamos el lugar donde estas</h1>
             </div>
             <div class="lugares">
                 <div class="card">
                     <h2>Chihuahua, Chihuahua Mexico</h2>
-                    <a href="https://www.google.com/maps/place/Chihuahua,+Chih./@28.6710638,-106.134658,12z/data=!3m1!4b1!4m5!3m4!1s0x86ea449d5d484033:0xb7f1a7a706dd1d7b!8m2!3d28.6329957!4d-106.0691004" target="_blank" rel="noopener noreferrer">Google maps</a>
+                    <a
+                        href="https://www.google.com/maps/place/Chihuahua,+Chih./@28.6710638,-106.134658,12z/data=!3m1!4b1!4m5!3m4!1s0x86ea449d5d484033:0xb7f1a7a706dd1d7b!8m2!3d28.6329957!4d-106.0691004"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Google maps</a
+                    >
                 </div>
                 <div class="card">
                     <h2>Marte</h2>
-                    <a href="https://www.google.com/maps/place/Marte+Toko/@42.0996252,74.9017565,3z/data=!4m9!1m2!2m1!1smarte!3m5!1s0x3031255f4a3cb3a1:0xb42e2caf7657916b!8m2!3d3.5395448!4d98.6432589!15sCgVtYXJ0ZZIBCndob2xlc2FsZXI" target="_blank" >Google maps</a>
+                    <a
+                        href="https://www.google.com/maps/place/Marte+Toko/@42.0996252,74.9017565,3z/data=!4m9!1m2!2m1!1smarte!3m5!1s0x3031255f4a3cb3a1:0xb42e2caf7657916b!8m2!3d3.5395448!4d98.6432589!15sCgVtYXJ0ZZIBCndob2xlc2FsZXI"
+                        target="_blank"
+                        >Google maps</a
+                    >
                 </div>
                 <div class="card">
                     <h2>La Atlantida</h2>
-                    <a href="https://www.google.com/maps/d/u/0/embed?mid=1quRThY_ic4yI3AQSL245IVA18n8&ie=UTF8&hl=es&msa=0&t=h&s=AARTsJoZJ4OwDg4RW4yrCV4EANx-de8zVQ&ll=30.98702747621721%2C-23.81835912499998&spn=18.33829%2C25.488281&z=6&output=embed" target="_blank" rel="noopener noreferrer">Google maps</a>
+                    <a
+                        href="https://www.google.com/maps/d/u/0/embed?mid=1quRThY_ic4yI3AQSL245IVA18n8&ie=UTF8&hl=es&msa=0&t=h&s=AARTsJoZJ4OwDg4RW4yrCV4EANx-de8zVQ&ll=30.98702747621721%2C-23.81835912499998&spn=18.33829%2C25.488281&z=6&output=embed"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Google maps</a
+                    >
                 </div>
             </div>
             <div class="footer">
@@ -68,9 +82,40 @@
                         cols="29"
                         rows="5"
                     ></textarea>
-                    <input type="submit" value="Enviar" class="btn-sumit" />
+                    <button
+                        type="button"
+                        onclick="recogerdatos()"
+                        class="btn-sumit"
+                    >
+                        Enviar
+                    </button>
                 </div>
             </div>
         </div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            function recogerdatos() {
+                var email = document.getElementById("email").value;
+                var cuerpo = document.getElementById("cuerpo").value;
+                let tiempo = (timestamp = new Date(Date.now()).toUTCString());
+                console.log(email);
+                console.log(cuerpo);
+
+                let config = {
+                    url: "http://localhost:8888/info",
+                    method: "post",
+                    data: {
+                        email: email,
+                        cuerpo: cuerpo,
+                        tiempo: tiempo,
+                    },
+                };
+                // transmitir los datos al backend
+                axios(config).then((response) => {
+                    console.log(response);
+                });
+            }
+        </script>
     </body>
 </html>

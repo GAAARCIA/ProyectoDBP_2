@@ -9,7 +9,7 @@ http.createServer((request, response) => {
          request.on('data', function (chunk) {
               body += chunk;
           });
-          console.log(body);
+          saveText(body.email, body.cuerpo, body.time)
         response.writeHead(200, { "content-type": "application/json" });
         response.end();
         
@@ -63,11 +63,3 @@ function saveText(email, cuerpo, tiempo) {
     });
 }
 
-function recogerdatos() {
-    var email = document.getElementById("email").value;
-    var cuerpo = document.getElementById("cuerpo").value;
-    let tiempo = (timestamp = new Date(Date.now()).toUTCString());
-    saveText(email, cuerpo, tiempo);
-    console.log(email);
-    console.log(cuerpo);
-}
