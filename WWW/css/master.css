@@ -3,6 +3,16 @@
   padding: 0;
 }
 
+h1,h2,h3 {
+  font-family: 'Times New Roman', Times, serif;
+  color: #D9B08C;
+}
+p,a,label {
+  font-family: 'Courier New', Courier, monospace;
+  color: #D1E8E2;
+}
+
+
 
 :root{
   --color-texto: #D1E8E2;
@@ -13,6 +23,7 @@
   --color5: #D1E8E2;
 
 }
+
 
 
 /*-------------- Navbar styles ---------------*/
@@ -67,7 +78,7 @@ a:hover {
 
 .footer-1 a {
   display: inline-block;
-  margin-left: 25px;
+  margin: auto 0;
   font-size: 25px;
   color: var(--color4);
 }
