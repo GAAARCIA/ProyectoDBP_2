@@ -6,6 +6,12 @@
 
 :root{
   --color-texto: #D1E8E2;
+  --color1: #2c3531;
+  --color2: #116466;
+  --color3: #D9B08C;
+  --color4: #FFCB9A;
+  --color5: #D1E8E2;
+
 }
 
 #titulo-principal {
@@ -29,6 +35,11 @@ p {
   padding-left: 25px;
 }
 
+#logo {
+  height: auto;
+  width: 100px;
+}
+
 .nav-item {
   display: inline-block;
   padding: 10px 20px;
@@ -39,3 +50,14 @@ a:hover {
   color: blue;
 }
 
+/*-------------Footer styles ------------------*/
+.footer-1 {
+  justify-content: center;
+  align-content: space-around;
+}
+.footer-1 img {
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin-left: 20%;
+}

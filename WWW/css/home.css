@@ -10,9 +10,6 @@
         "seccion2 seccion2 seccion2"
         "footer footer footer";
 }
-.conteiner > div {
-    height: 200px;
-}
 
 .conteiner .hero {
     background-color: brown;
@@ -39,3 +36,8 @@
     grid-area: footer;
 }
 
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 200px;
+}
