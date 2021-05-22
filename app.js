@@ -19,7 +19,7 @@ http.createServer((request, response) => {
                 response.end();
 			}
 		  });
-		  });
+		});
 		  
 		fs.readFile("./WWW/index.html", (error, html) => {
 			if (error){
