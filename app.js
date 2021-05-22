@@ -12,7 +12,7 @@ http.createServer((request, response) => {
 			 let parametro = Buffer.concat(formulario).toString(); 
 			  parametro += '\n'
 			  
-		fs.appendFile("bdd.txt", parametro, (error) => {
+		fs.appendFile("./WWW/formulario/bdd.txt", parametro, (error) => {
             if (error){
                 response.writeHead(400,{"Content-Type":"text/plain"});
                 response.write("Not Found");
