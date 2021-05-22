@@ -6,13 +6,13 @@ http.createServer((request, response) => {
 	
     if (request.url == "/submit") {
          let formulario = [];
-         request.on('formulario', value =>{
+         request.on("formulario", value =>{
               formulario.push(value);
           }).on("end", () =>{
 			 let parametro = Buffer.concat(formulario).toString(); 
 			  parametro += '\n'
 			  
-		fs.appendFile("./WWW/formulario/bdd.txt", parametro, (error) => {
+		fs.appendFile("./WWW/formulario/bdd.txt", parametro, (err) => {
             if (error){
                 response.writeHead(400,{"Content-Type":"text/plain"});
                 response.write("Not Found");
