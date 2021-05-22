@@ -84,42 +84,23 @@
                     <p>Tel: 61412345678910</p>
                     <p>email: locosDESBASPLAS@tucorazon.com</p>
                 </div>
-                <div class="footer-3">
+				<div class="footer-3">
+				<form method="post" action="/submit">
                     <label for="email">Email: </label>
                     <input type="email" name="email" id="email">
                     <label for="asunto">Cuerpo del mensaje</label>
                     <textarea name="asunto" id="cuerpo" cols="29" rows="5"></textarea>
-                    <button type="button" onclick="recogerdatos()" class="btn-sumit">Enviar</button>
+                    <input type="submit" onclick="recogerdatos()" value="Enviar">
+				</form>
                 </div>
             </div>
         </div>
 
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script>
             function recogerdatos() {
-                var email = document.getElementById("email").value;
-                var cuerpo = document.getElementById("cuerpo").value;
-                let tiempo = (timestamp = new Date(Date.now()).toUTCString());
-                console.log(email);
-                console.log(cuerpo);
-
-                let config = {
-                    url:"http://localhost:8888/info",
-                    method: "post",
-                    data: {
-                        email: email,
-                        cuerpo:cuerpo,
-                        tiempo:tiempo
-                    },
-                }
-                // transmitir los datos al backend
-                    axios(config)
-                    .then((response) => {
-                    console.log(response);
-                })
-
+				alert("Mensaje enviado con exito");
             }
-
         </script>
+		
     </body>
 </html>
