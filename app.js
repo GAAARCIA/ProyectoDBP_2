@@ -41,20 +41,20 @@ http.createServer((request, response) => {
             } else {
                 const extension = file.split(".").pop();
                 switch (extension) {
-                    case "js":
+                    case 'js':
                         response.writeHead(200, {
                             "Content-Type": "text/javascript",
                         });
                         break;
-                    case "html":
+                    case 'html':
                         response.writeHead(200, {
                             "Content-Type": "text/html",
                         });
                         break;
-                    case "css":
+                    case 'css':
                         response.writeHead(200, { "Content-Type": "text/css" });
                         break;
-                    case "jpeg":
+                    case 'jpeg':
                         response.writeHead(200, {
                             "Content-Type": "image/jpeg",
                         });
