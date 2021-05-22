@@ -2,19 +2,36 @@ const http = require("http");
 const fs = require("fs");
 
 http.createServer((request, response) => {
-    console.log(request.url);
-    console.log(request.method);
-    if (request.method == "POST") {
-         var body = "";
-         request.on('data', function (chunk) {
-              body += chunk;
-          });
-          saveText(body.email, body.cuerpo, body.time)
-        response.writeHead(200, { "content-type": "application/json" });
-        response.end();
+	const file = request.url == '/' ? './WWW/index.html' : `./WWW${request.url}`;
+	
+    if (request.url == "/submit") {
+         let formulario = [];
+         request.on('formulario', value =>{
+              formulario.push(value);
+          }).on("end", () =>{
+			 let parametro = Buffer.concat(formulario).toString(); 
+			  parametro += '\n'
+			  
+		fs.appendFile(".bdd.txt", parametro, (error) => {
+            if (error){
+                response.writeHead(400,{"Content-Type":"text/plain"});
+                response.write("Not Found");
+                response.end();
+			}
+		  });
+		  });
+		  
+		fs.readFile("./WWW/index.html", (error, html) => {
+			if (error){
+			  response.writeHead(400,{"Content-Type":"text/plain"});
+			  response.write("Not Found");
+			  response.end();
+			}
+		  response.writeHead(200, {"Content-Type":"text/html"});
+		  response.end(html);
+		});
         
     } else {
-        const file = request.url == "/" ? "./WWW/index.html" : `./WWW${request.url}`;
 
         fs.readFile(file, (err, data) => {
             if (err) {
@@ -51,15 +68,4 @@ http.createServer((request, response) => {
         });
     }
 }).listen(8888);
-
-function saveText(email, cuerpo, tiempo) {
-    const lineTexto = `${tiempo}\nEmail: ${email}\nMensaje: ${cuerpo}`;
-    fs.appendFile("./bdd.txt", lineTexto, (err) => {
-        if (err) {
-            console.log(err);
-        } else {
-            alert("Se mando mensaje exitosamente");
-        }
-    });
-}
 
