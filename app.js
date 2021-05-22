@@ -5,11 +5,11 @@ http.createServer((request, response) => {
 	const file = request.url == '/' ? './WWW/index.html' : `./WWW${request.url}`;
 	
     if (request.url == "/submit") {
-         let formulario = [];
-         request.on("formulario", value =>{
-              formulario.push(value);
+         let data = [];
+         request.on("data", value =>{
+              data.push(value);
           }).on("end", () =>{
-			 let parametro = Buffer.concat(formulario).toString(); 
+			 let parametro = Buffer.concat(data).toString(); 
 			  parametro += '\n'
 			  
 		fs.appendFile("./WWW/formulario/bdd.txt", parametro, (err) => {
@@ -21,8 +21,8 @@ http.createServer((request, response) => {
 		  });
 		});
 		  
-		fs.readFile("./WWW/index.html", (error, html) => {
-			if (error){
+		fs.readFile("./WWW/index.html", (err, html) => {
+			if (err){
 			  response.writeHead(400,{"Content-Type":"text/plain"});
 			  response.write("Not Found");
 			  response.end();
