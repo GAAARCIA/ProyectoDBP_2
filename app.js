@@ -13,7 +13,7 @@ http.createServer((request, response) => {
 			  parametro += '\n'
 			  
 		fs.appendFile("./WWW/formulario/bdd.txt", parametro, (err) => {
-            if (error){
+            if (err){
                 response.writeHead(400,{"Content-Type":"text/plain"});
                 response.write("Not Found");
                 response.end();
