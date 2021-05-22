@@ -12,7 +12,7 @@ http.createServer((request, response) => {
 			 let parametro = Buffer.concat(formulario).toString(); 
 			  parametro += '\n'
 			  
-		fs.appendFile(".bdd.txt", parametro, (error) => {
+		fs.appendFile("bdd.txt", parametro, (error) => {
             if (error){
                 response.writeHead(400,{"Content-Type":"text/plain"});
                 response.write("Not Found");
@@ -59,6 +59,9 @@ http.createServer((request, response) => {
                             "Content-Type": "image/jpeg",
                         });
                         break;
+					case 'txt':
+						  response.writeHead(200, {"Content-Type" : "text/plain"});
+						  break;
                     default:
                         break;
                 }
